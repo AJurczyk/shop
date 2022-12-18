@@ -34,6 +34,3 @@ There are some items loaded at the start:
 * plate with UUID: 00000000-0000-0000-0000-000000000010
 #### DISCOUNTS
 * Discount 10% on pears (pear id: "00000000-0000-0000-0000-000000000002")
-
-### Postman collection requests:
-* 
