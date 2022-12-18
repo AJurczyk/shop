@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "2332c749-b3ef-4096-8bee-8dd2f8db4de5",
+		"name": "shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add percentage discount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"percentage\" : 10,\n    \"productIds\" : [\"00000000-0000-0000-0000-000000000001\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/discounts/percentage-discount",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"discounts",
+						"percentage-discount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add amount discount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nextItemDiscountPercentage\" : 10,\n    \"maxQuantity\": 5,\n    \"productIds\" : [\"00000000-0000-0000-0000-000000000001\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/discounts/amount-discount",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"discounts",
+						"amount-discount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/checkout?product-id=00000000-0000-0000-0000-000000000001&amount=6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"checkout"
+					],
+					"query": [
+						{
+							"key": "product-id",
+							"value": "00000000-0000-0000-0000-000000000001"
+						},
+						{
+							"key": "amount",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
